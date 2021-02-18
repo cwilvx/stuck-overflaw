@@ -1,0 +1,7 @@
+*.pyc
+virtual/
+.vscode/
+*.env
+articles/
+media/
+staticfiles/

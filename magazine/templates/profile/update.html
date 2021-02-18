@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+{% load widget_tweaks %}
+
+{% block content %}
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+    <!-- <div class="form-row">
+          {% render_field p_form.image class+="form-control" %}
+    </div> -->
+    <div class="">
+      <h1>Profile </h1>
+      <hr>
+      <div class="form-row">
+        <div class="">
+          <div class="form-group"><label>Username</label>
+            {% render_field u_form.username class+="form-control" %}
+          </div>
+        </div>
+        <div class="">
+          <div class="form-group"><label>Email</label>
+            {% render_field u_form.email class+="form-control" %}
+          </div>
+        </div>
+      </div>
+      <div class="form-group"><label>Bio</label>
+        {% render_field p_form.bio class+="form-control" %}
+        <div class="form-row">
+          <div class="">
+            <div class="form-group"><label>location</label>
+              {% render_field p_form.location class+="form-control" %}
+            </div>
+          </div>
+          <div class="">
+            <div class="form-group"><label>Birth date</label>
+              {% render_field p_form.birth_date class+="form-control" %}
+            </div>
+          </div>
+        </div>
+        <hr>
+        <div class="form-row">
+          <div class="col-md-12 content-right">
+            <button class="btn btn-primary form-btn" type="submit" href="{% url "profile" user.username %}">SAVE </button>
+            <a href="{% url "profile" user.username %}" class="btn btn-danger form-btn">Go back </a>
+          </div>
+        </div>
+      </div>
+    </div>
+</form>
+
+{% endblock %}
