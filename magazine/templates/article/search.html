@@ -28,7 +28,7 @@
   </div>
   <div class="card-footer text-muted">
 	Posted on {{article.created_on}} by
-	<a href="#">{{article.editor}}</a>
+	<a href="/profile/?id={{article.editor.id}}">{{article.editor}}</a>
   </div>
 </div>
 {% empty %}
