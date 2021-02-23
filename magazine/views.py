@@ -80,7 +80,7 @@ class apiDescription(APIView):
         
 def index(request):
     posts = mode.all_articles().order_by('-created_on')
-    paginator = Paginator(posts,3)
+    paginator = Paginator(posts,4)
     page = request.GET.get('page')
     try:
         posts = paginator.page(page)
@@ -103,7 +103,6 @@ def search_results(request):
 @login_required(login_url='/accounts/login/')
 def new_article(request,username):
     current_user = request.user
-    username = current_user
     if request.method == 'POST':
         form = NewArticleForm(request.POST, request.FILES)
         if form.is_valid():
@@ -117,6 +116,7 @@ def new_article(request,username):
     return render(request, 'article/new_article.html', {"form": form})
 
 def article(request, slug):
+    current_user = request.user
     post = mode.objects.get(slug = slug)
     template_name = 'article/article.html'
     # post = get_object_or_404(mode,id = article_id)
@@ -129,6 +129,7 @@ def article(request, slug):
 
             new_comment = form.save(commit=False)
             new_comment.post = post
+            new_comment.author = current_user
             new_comment.save()
     else:
         form = CommentForm()

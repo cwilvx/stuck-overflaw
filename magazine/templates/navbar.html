@@ -11,7 +11,7 @@
 <body>
     <nav  class="navbar navbar-dark navbar-expand-md text-light justify-content-between form-inline shadow-sm" style="border-bottom: 0.2px solid rgb(199, 199, 199);">
         <div class="container">
-            <a class="navbar-brand" href="/">Be Social</a>
+            <a class="navbar-brand" href="/" style="margin-left: 30px;">Stuck Overflow</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -19,7 +19,7 @@
             {% if request.user.is_authenticated %}
                  <div class="collapse navbar-collapse" id="navbarResponsive">
               <ul class="navbar-nav ml-auto">
-                <a class="nav-link" href="{% url "new_article" user.username %}">New post
+                <a class="nav-link" href="{% url "new_article" user.username %}">New Question
                     <span class="sr-only"></span>
                   </a>
                 </li>

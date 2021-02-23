@@ -1,3 +1,4 @@
+from typing import cast
 from django.db import models
 import datetime as dt
 from django.contrib.auth.models import User
@@ -108,10 +109,12 @@ class Article(models.Model):
 
 class Comment(models.Model):
     post = models.ForeignKey(Article,on_delete=models.CASCADE,related_name='comments')
-    email = models.EmailField()
+    # email = models.EmailField()
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    active = models.BooleanField(default=False)
+    active = models.BooleanField(default=True)
+    author = models.ForeignKey(User,on_delete=models.CASCADE,related_name='comments', null=True, blank=True)
+
 
     class Meta:
         ordering = ['created_on']

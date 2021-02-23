@@ -20,7 +20,15 @@ class CommentAdmin(admin.ModelAdmin):
 
 	def approve_comments(self,request,queryset):
 		queryset.update(active=False)
-  
+
+	'''
+	The 3 lines above can be used to enable comment approval. But, first set "Comment.active = models.BooleanField(default=True)" to true (in models.py)
+	'''
+
+  	# def save_model(self, request, obj, form, change):
+	# 	if getattr(obj, 'author', None) is None:
+	# 		obj.author = request.user
+	# 	obj.save()
 
 admin.site.site_header = "Baseline Magazine Admin"
 admin.site.unregister(Group)

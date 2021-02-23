@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-<title>Home-Baseline Magazine</title>
+<title>Home -Stuck Overflow</title>
 <style>
   .mb-4{
     background-color: #1d2b38;
@@ -36,7 +36,7 @@
   <!-- Pagination -->
   
   {% if posts.has_other_pages %}
-  <ul class="pagination justify-content-center mb-4">
+  <ul class="pagination justify-content-center">
     {% if posts.has_previous %}
     <li class="page-item">
             <a class="page-link" href="?page={{ posts.previous_page_number }}">&larr; Newer</a>
@@ -55,10 +55,10 @@
   </div>
 {% else %}
 <div>
-  <h1 class="text-center btn btn-primary disabled btn-block" style="margin-top: 20px; border-radius: 0; width: 400px; margin-left: 400px;">No published posts 
+  <h1 class="text-center btn btn-primary disabled btn-block" style="margin-top: 20px; border-radius: 0; width: 400px; margin-left: 400px;">No published Questions 
   
   {% if user.is_authenticated %}
-    <span><a style="color: white; text-decoration: underline;" href="{% url "new_article" user.username %}">create</a></span></h1>
+    <span><a style="color: white; text-decoration: underline;" href="{% url "new_article" user.username %}">Ask </a></span></h1>
   {% else %}
   <span><a style="color: white; text-decoration: underline;" href="accounts/login/">login </a></span>to create</h1>
   {% endif %}

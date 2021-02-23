@@ -28,7 +28,7 @@
           <p class="font-weight-bold">
             {{ comment.name }}
             <span class=" text-muted font-weight-normal">
-              {{ comment.created_on }}
+              {{comment.author}} | {{ comment.created_on }}
             </span>
           </p>
           {{ comment.body | linebreaks }}
@@ -37,7 +37,7 @@
         <div class="card-body">
           {% if new_comment %}
           <div class="alert alert-success" role="alert">
-            Your comment is awaiting moderation
+            Your answer has been published!
           </div>
           {% else %}
           <h3>Leave a comment</h3>
