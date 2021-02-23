@@ -28,7 +28,7 @@
           <p class="font-weight-bold">
             {{ comment.name }}
             <span class=" text-muted font-weight-normal">
-              {{comment.author}} | {{ comment.created_on }}
+              <a href="/profile?id={{comment.author.id}}">{{comment.author}}</a> | {{ comment.created_on }}
             </span>
           </p>
           {{ comment.body | linebreaks }}

@@ -14,26 +14,26 @@
     <div class="profile-card" style="background-color: #1d2b38; border: none;">
         <div class="profile-back bg-primary" ></div>
         <div class="rounded-circle profile-pic" style="background-image: url({{user.profile.image}});background-position: center; background-size: cover; background-repeat: no-repeat; left: 38% !important;"></div>
-        <h3 class="profile-name bg-primary">{{user.username}}</h3>
+        <h3 class="profile-name bg-primary">{{profile.user.username}}</h3>
         <p class="profile-bio">
-        {% if user.profile.bio %}
-            {{user.profile.bio}} 
+        {% if profile.bio %}
+            {{profile.bio}} 
         {% else %}
-            You have no bio
+            No bio
         {% endif %}
                 </p>
         <ul class="social-list">
             <li>Location: <strong> 
-            {% if user.profile.location %}
-                {{user.profile.location}}
+            {% if profile.location %}
+                {{profile.location}}
             {% else %}
                 Not updated
             {% endif %}
                 </strong></li>
-            <li>Email: <strong>{{user.email}}</strong></li>
+            <li>Email: <strong>{{profile.email}}</strong></li>
             <li>Born on:<strong>
-            {% if user.profile.birth_date %}
-                {{user.profile.birth_date}}
+            {% if profile.birth_date %}
+                {{profile.birth_date}}
             {% else %}
                 Not updated
             {% endif %}

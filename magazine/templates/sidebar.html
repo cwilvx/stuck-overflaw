@@ -27,7 +27,7 @@
 		<div class="card my-4">
 			<h5 class="card-header">Hello {{user.username}}</h5>
 			<div class="card-body">
-			<a style="border-radius: 0;" href="{% url "profile" user.username%}" class="btn btn-primary">Profile</a>
+			<a style="border-radius: 0;" href="/profile/?id={{user.id}}" class="btn btn-primary">Profile</a>
 			<a style="border-radius: 0;" href="{% url "filter_by_editor" user.username%}" class="btn btn-primary">View all your posts</a>
 			<a style="border-radius: 0;" href="/logout" class="btn btn-primary">Logout</a>
 			</div>

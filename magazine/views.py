@@ -187,7 +187,7 @@ def delete_user(request,pk):
     return redirect('/')
 
 @login_required(login_url='/accounts/login/')
-def profile(request,username):
-    user = request.user
-    username = user.username
-    return render(request,'profile/profile.html',{'user':user})
+def profile(request):
+    id = request.GET['id']
+    profile = Profile.get_single_editor(id)
+    return render(request,'profile/profile.html',{'profile':profile})

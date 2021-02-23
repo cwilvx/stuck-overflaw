@@ -14,6 +14,7 @@ class Profile(models.Model):
     location = models.CharField(max_length = 30,blank=True)
     birth_date = models.DateField(null=True,blank=True)
     image = models.TextField(default='https://i.ibb.co/y5HMpDk/0-T9m-KFye-N5-M-Regular.jpg')
+
     def __str__(self):
         return (self.user.username)
     
@@ -31,6 +32,14 @@ class Profile(models.Model):
     def all_editors(cls):
         editors = cls.objects.all()
         return editors
+
+    @classmethod
+    def get_single_editor(self, id):
+        # editor = cls.objects.get(self.user.username == "meh")
+        # return editor
+        editors = self.objects.get(user_id = id)
+        return editors
+        
 
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
@@ -114,7 +123,6 @@ class Comment(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     active = models.BooleanField(default=True)
     author = models.ForeignKey(User,on_delete=models.CASCADE,related_name='comments', null=True, blank=True)
-
 
     class Meta:
         ordering = ['created_on']
