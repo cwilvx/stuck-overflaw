@@ -128,7 +128,7 @@ class Comment(models.Model):
         ordering = ['created_on']
 
     def __str__(self):
-        return 'Comment {} by {}'.format(self.body, self.email)
+        return '{} | {} | {}'.format(self.post, self.body, self.author)
 
 class Editor(models.Model):
     first_name = models.CharField(max_length=30)
