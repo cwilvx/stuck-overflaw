@@ -13,7 +13,7 @@ class Profile(models.Model):
     bio = models.TextField(max_length=500,blank=True)
     location = models.CharField(max_length = 30,blank=True)
     birth_date = models.DateField(null=True,blank=True)
-    image = models.TextField(default='https://i.ibb.co/y5HMpDk/0-T9m-KFye-N5-M-Regular.jpg')
+    image = models.TextField(default='https://blogs.biomedcentral.com/bmcblog/wp-content/uploads/sites/7/2015/07/adalovelace.jpg')
 
     def __str__(self):
         return (self.user.username)
@@ -79,7 +79,7 @@ class Article(models.Model):
     editor = models.ForeignKey(User,on_delete=models.CASCADE,related_name='blog_posts')
     # tag = models.ManyToManyField(tags,blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
-    article_image = models.CharField(max_length=6000,default='https://i.ibb.co/d7rtpgC/5c3vd-Zz-jdc-Regular.jpg')
+    article_image = models.CharField(max_length=6000,default='http://africa-me.com/wp-content/uploads/2020/07/africa-women-tech-africa-me.jpg')
     photo_credits = models.CharField(max_length=6000,default='unsplash.com')
     slug = models.SlugField(null=False,unique=True)
     

@@ -41,8 +41,8 @@
         <hr>
         <div class="form-row">
           <div class="col-md-12 content-right">
-            <button class="btn btn-primary form-btn" type="submit" href="{% url "profile" user.username %}">SAVE </button>
-            <a href="{% url "profile" user.username %}" class="btn btn-danger form-btn">Go back </a>
+            <button class="btn btn-primary form-btn" type="submit">SAVE </button>
+            <a href="/profile?id={{user.id}}" class="btn btn-danger form-btn">Go back </a>
           </div>
         </div>
       </div>

@@ -161,8 +161,7 @@ def delete_article(request,slug):
     return redirect('/')
 
 @login_required(login_url='/accounts/login/')
-def update_profile(request,username):
-    username = request.user.username
+def update_profile(request):
     if request.method == 'POST':
         user_form = UserUpdateForm(request.POST,instance=request.user)
         profile_form = ProfileUpdateForm(request.POST,request.FILES,instance=request.user.profile)
