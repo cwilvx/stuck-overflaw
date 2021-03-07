@@ -40,7 +40,6 @@ class Profile(models.Model):
         editors = self.objects.get(user_id = id)
         return editors
         
-
 @receiver(post_save, sender=User)
 def update_user_profile(sender, instance, created, **kwargs):
     if created:
