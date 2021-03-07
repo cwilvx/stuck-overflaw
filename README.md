@@ -3,13 +3,18 @@
     <h5>~ saving the student's lives since I don't know when 😆 ~</h5>
 </div> -->
 ![](/images/hero.png)
-Stuck overflaw is a web application that enables university students to seek assistance and network with other students and lectures.
+[Stuck overflaw](https://be-social-django.herokuapp.com/) is a web application that enables university students to seek assistance and network with other students and lectures.
 
-This web app is build using [Python 3](https://www.python.org/), The [Django Framework](https://www.djangoproject.com/) and a [PostgreSQL](https://www.postgresql.org/) database. Django is a high level Python web framework that encourages rapid development and clean and pragmatic design.
+This web app is built using [Python 3](https://www.python.org/), The [Django Framework](https://www.djangoproject.com/) and a [PostgreSQL](https://www.postgresql.org/) database. Django is a high level Python web framework that encourages rapid development and clean and pragmatic design.
 
-The app implements a combined full stack development web app structure. 
+The app implements a combined full stack development web app structure.
+
+> This project has been deployed using Heroku at https://be-social-django.herokuapp.com/. The page may load slowly for the first time. This is because the dynos my be sleeping. Please be patient as the page loads for the first time. Also, the app is only responsive on large screens. eg. on a laptop or desktop. Please view the deployed application using a laptop or a desktop computer.
+---
 ### Running the app locally
-Since this app uses the PostgreSQL database, you need to have it installed in your machine. You can download the package from [their website](https://www.postgresql.org/download/). Assuming you have all the needed tools, ie. Python3 and Postgresql, following the next few steps will brew and serve your app.
+Since this app uses the PostgreSQL database, you need to have it installed in your machine. You can download the package from [their website](https://www.postgresql.org/download/).
+
+Assuming you have all the needed tools, ie. Python3 and Postgresql, following the next few steps will brew and serve your app.
 
 ### Step 1 -- Create a postgreSQL database
 We'll need a database named `overflow` for this app. You can create it by running these commands in the `psql` terminal.
@@ -22,14 +27,15 @@ Running the following series of commands on a terminal window will get your app 
 ```bash
 $ git clone git@github.com:geoffrey45/edunet.git #cloning via SSH
 # or clone via HTTPS
-$ git clone https://github.com/geoffrey45/edunet.git 
-$ cd edunet
+$ git clone https://github.com/geoffrey45/stack-overflaw.git 
+$ cd stack-overflaw
 $ source virtual/bin/activate
 $ pip install -r requirements.txt
 $ python manage.py migrate
 ```
 ### Step 3 -- Configure the environmental variables
-Some variables need to be provided using the serving environment. In your project folder, locate a file named `.env.example`. Just rename this file to `.env` and edit the necesary details
+Some variables need to be provided by the serving environment. In your project folder, locate a file named `.env.example`. Then, rename this file to `.env` and edit the necesary details.
+
 ### Step 4 -- Serving the app
 Now that you have everything in place, you can serve the app by executing:
 
@@ -72,7 +78,7 @@ By hitting <kbd>New Post</kbd> from the side bar or <kbd>New Question</kbd> from
 
 ![](/images/new_post.jpg)
 Once the user submits the details, the form data is stored in the database and will be displayed on the home as the latest post.
-
+> Did you know? You can click on an image to enlarge it.
 #### Step 3 -- Contributing to a post
 By clicking on <kbd>Show this thread</kbd> on a post card, a user will be directed to a page showing the post details and existing comments. 
 
@@ -125,6 +131,6 @@ As you may have noticed, most of the actions in the app have no confirmation. eg
 
 That's it
 
-> Did you know? We were planning of using a more industrial approach to this project. We were in the process of developing this project using [Flask](https://flask.palletsprojects.com/) and [Mongo Db Atlas](https://www.mongodb.com/cloud/atlas) for the APIs and maybe [Vue.js](https://vuejs.org/) for the frontend. We quit mid-way due to time factors. You can still look at the half-way developed API deployed [here](https://be-social-be.herokuapp.com/) and the code in [this GitHub repo](https://github.com/geoffrey45/be-social-be).
+> Did you know? We were planning of using a more industrial approach to this project. We were in the process of developing this project using [Flask](https://flask.palletsprojects.com/) and [Mongo Db Atlas](https://www.mongodb.com/cloud/atlas) for the APIs and maybe [Vue.js](https://vuejs.org/) for the frontend. We quit mid-way due to to time factors. You can still look at the half-way developed API deployed [here](https://be-social-be.herokuapp.com/posts) and the code in [this GitHub repo](https://github.com/geoffrey45/be-social-be/). (Although the project is not quite documented 😶)
 
 Thank you!
