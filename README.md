@@ -1,16 +1,15 @@
-<div style="text-align: center; border: 1px solid white; border-radius: 5px;">
+<!-- <div style="text-align: center; border: 1px solid white; border-radius: 5px;">
     <h1>ST<span style="color: red">U</span>CK OVERFLOW!</h1>
     <h5>~ saving the student's lives since I don't know when 😆 ~</h5>
-</div>
-
-<br>
-Stuck overflow is a web application that allows university students to seek assistance from other students and lectures. 
+</div> -->
+![](/images/hero.png)
+Stuck overflaw is a web application that enables university students to seek assistance and network with other students and lectures.
 
 This web app is build using [Python 3](https://www.python.org/), The [Django Framework](https://www.djangoproject.com/) and a [PostgreSQL](https://www.postgresql.org/) database. Django is a high level Python web framework that encourages rapid development and clean and pragmatic design.
 
 The app implements a combined full stack development web app structure. 
 ### Running the app locally
-Since this app uses the PostgreSQL database, you need to have it installed in your machine. You can download the package from [their website](https://www.postgresql.org/download/). Assuming you have all the needed tools, ie. Python3 and Postgresql, following the next few steps will brew and serve your app hot.
+Since this app uses the PostgreSQL database, you need to have it installed in your machine. You can download the package from [their website](https://www.postgresql.org/download/). Assuming you have all the needed tools, ie. Python3 and Postgresql, following the next few steps will brew and serve your app.
 
 ### Step 1 -- Create a postgreSQL database
 We'll need a database named `overflow` for this app. You can create it by running these commands in the `psql` terminal.
